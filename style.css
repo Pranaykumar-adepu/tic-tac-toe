@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(234, 239, 239);
+    font-family: "Lato", serif;
+
+    font-style: normal;
+}
+
+nav h1 {
+    background-color: rgb(44, 42, 42);
+    color: white;
+    padding: 10px;
+}
+
+.container {
+    margin: 30px auto;
+    width: 90vw;
+
+}
+
+.game-box {
+    display: flex;
+    background-color: rgb(210, 210, 208);
+    justify-content: center;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.info {
+    padding: 40px;
+    font-size: 1.4vw;
+}
+
+.info .sb {
+    margin-top: 10px;
+}
+
+.sb .x {
+    width: 30vw;
+
+}
+
+.btn {
+    background-color: black;
+    color: white;
+    padding: 0.5vw 1.5vw;
+    border-radius: 5px;
+    margin-top: 10px;
+
+}
+
+.box-container {
+   
+    display: grid;
+    grid-template-columns: repeat(3, 8vw);
+    grid-template-rows: repeat(3, 8vw);
+    margin-top: 20px;
+}
+
+.box {
+    /* background-color:wheat ; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 8vw;
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+.box:hover {
+    background-color: rgb(255, 255, 255);
+}
+
+.box:nth-child(1),
+.box:nth-child(2),
+.box:nth-child(3) {
+    border-top: none;
+}
+
+.box:nth-child(7),
+.box:nth-child(8),
+.box:nth-child(9) {
+    border-bottom: none;
+}
+
+.box:nth-child(3n + 1) {
+    border-left: none;
+}
+
+.box:nth-child(3n) {
+    border-right: none;
+}
+
+.after {
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(170, 170, 188);
+    font-size: 6vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out, background 1.5s ease-in-out;
+}
+
+
+
+/* .aftere:hover {
+    opacity: 1;
+} */
+
+
+
+
+@media only screen and (max-width: 450px) {
+    .game-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .box-container {
+        display: grid;
+        grid-template-columns: repeat(3, 15vw);
+        grid-template-rows: repeat(3, 15vw);
+    }
+
+    .box {
+        font-size: 8vw;
+    }
+
+    .info {
+        padding: 40px;
+        font-size: 2.5vw;
+    }
+
+    .sb .x {
+        width: 25vw;
+    }
+}
